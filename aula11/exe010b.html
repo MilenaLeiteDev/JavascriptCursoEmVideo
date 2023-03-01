@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nationality</title>
+</head>
+<body>
+    <h1>Are you Brazilian?</h1>
+    
+    <label for="country">In which country were you born? </label>
+    <input  type="text" name="country" id="country">
+    <br>
+    <input type="button" value="check" onclick= check()>
+    <div id = "result"></div>
+
+    <script>
+        function check() {
+            let nameOfTheCountry = window.document.querySelector('input#country').value
+            let result = window.document.querySelector('div#result')
+            
+            result.innerHTML = `<p> you are not Brazilian </p>`
+            
+            if (nameOfTheCountry === "Brazil") {
+                result.innerHTML =`<p> You are Brazilian </p>`
+            }
+        
+        }
+    </script>
+    
+</body>
+</html>

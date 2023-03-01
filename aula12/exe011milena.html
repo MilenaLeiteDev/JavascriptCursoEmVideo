@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting</title>
+</head>
+<body>
+<h1>Can I vote?</h1>
+
+<label for="idade">How old are you?</label>
+<br>
+<input type="number" name="age" id="age">
+<input type="button" value="verify" onclick = verify()>
+<div id="result"> Result: </div>
+
+<script>
+
+function verify() {
+
+    let age = document.querySelector('input#age').value
+    let result = document.querySelector('div#result')
+
+    if (age < 16) {
+        result.innerHTML = '<p> Your age is not enough to vote. <p/>'
+    } else if (age <18 || age > 65) {
+        result.innerHTML = '<p> The vote is optional. </p>'
+    } else {
+        result.innerHTML = '<p> The vote is obligated</p>'
+    }
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day of the Week</title>
+</head>
+<body>
+    <h1>Day of The Week</h1>
+    <label for="number">Enter a number between 0 and 6 and find out which day of the week it corresponds to in JS.  </label>
+    <br>
+    <input type="number" name="number" id="number">
+    <br>
+    <input type="button" value="verify" onclick=verify()>
+    <div id="result">Result</div>
+
+    <script>
+
+        function verify(){
+            let numberString = document.querySelector('input#number').value
+            let number = parseInt(numberString)
+            let result = document.querySelector('div#result')
+
+        switch(number){
+        case 0:
+            console.log(number)
+            result.innerHTML = '<p>Sunday</p>'
+            break
+        case 1:
+            result.innerHTML = '<p>Monday</p>'
+            break    
+        case 2:
+            result.innerHTML = '<p>Tuesday</p>'
+            break
+        case 3:
+            result.innerHTML = '<p>Wednesday</p>'
+            break
+        case 4:
+            result.innerHTML = '<p>Thursday</p>'
+            break
+        case 5:
+            result.innerHTML = '<p>Friday</p>'
+            break 
+        default:
+            result.innerHTML = '<p>Saturday</p>'
+            }
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day of the Week</title>
+</head>
+<body>
+    <h1>Day of The Week</h1>
+    <label for="number">Enter a number between 0 and 6 and find out which day of the week it corresponds to in JS.  </label>
+    <br>
+    <input type="number" name="number" id="number">
+    <br>
+    <input type="button" value="verify" onclick = verify()>
+    <div id="result">Result</div>
+
+    <script>
+
+        function verify(){
+            let number = parseInt(document.querySelector('input#number').value)
+            let result = document.querySelector('div#result')
+            
+            switch (number) {
+                case 0:
+                    result.innerHTML = '<p>Sunday</p>'
+                break
+                case 1:
+                    result.innerHTML = '<p>Monday</p>'
+                break    
+                case 2:
+                    result.innerHTML = '<p>Tuesday</p>'
+                break
+                case 3:
+                    result.innerHTML = '<p>Wednesday</p>'
+                break
+                case 4:
+                    result.innerHTML = '<p>Thursday</p>'
+                break
+                case 5:
+                result.innerHTML = '<p>Friday</p>'
+                break 
+                default:
+                    result.innerHTML = '<p>Saturday</p>'
+            }
+        }
+
+    </script>
+</body>
+</html> -->
